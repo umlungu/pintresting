@@ -28,13 +28,16 @@ gem 'jbuilder', '~> 1.2'
 # Twitter Bootstrap 3
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
+# Devise Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 3.1.1'
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
 end
 
 group :production do
-	gem 'pg', '~> 0.17.1'
+	gem 'pg'
 	gem 'rails_12factor'
 end
 
