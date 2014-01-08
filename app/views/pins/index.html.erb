@@ -1,6 +1,6 @@
 <h1>Listing pins</h1>
-
-<table>
+<div, class: "container">
+<table, class: "table table-striped">
   <thead>
     <tr>
       <th>Description</th>
@@ -14,9 +14,9 @@
     <% @pins.each do |pin| %>
       <tr>
         <td><%= pin.description %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pin , class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_pin_path(pin) , class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', pin, class: "btn btn-danger" , method: :delete, data: { confirm: 'Are you sure?'} %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,5 @@
 
 <br>
 
-<%= link_to 'New Pin', new_pin_path %>
+<%= link_to 'New Pin', new_pin_path, class: "btn btn-success" %>
+</div>
